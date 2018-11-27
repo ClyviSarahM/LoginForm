@@ -1,0 +1,92 @@
+body{
+    margin: 0;
+    padding:0;
+    font-family: sans-serif;
+    background: url("indexTreeView.png.jpg"); /** Image background**/
+    background-size: cover; /** Set size to screen size **/
+}
+
+.loginBox{
+    position: absolute; /** the only the size needed **/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /** transformation used to assume a center position**/
+    width: 400px;
+    padding:30px;
+    box-sizing: border-box; /** the div box size **/
+    background: rgba(0,0,0,.8); /** the color background and the opacity **/
+    box-shadow: 0 15px 25px rgba(0,0,0,.5); /** the shadow effect of the box **/
+    border-radius: 10px; /** the corner of the box **/
+
+}
+
+/** avatar style**/
+.loginBox .avatar{
+    position:absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    top: -40px;
+}
+
+
+.loginBox h2{
+    margin: 0;
+    padding: 0px 0px 5px 0px;
+    color: white;
+    text-align: center;
+}
+
+.loginBox .inputBox{
+    position: relative; /** take the whole place **/
+}
+
+.loginBox .inputBox input{
+    width: 100%;
+    padding: 10px 0;
+    color: white;
+    margin-bottom: 10px;
+    background: transparent; /** to remove the background of the input boxes **/
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white; /** to leave just a line on the bottom **/
+    font-size: 16px;
+}
+
+/** **/
+.loginBox .inputBox label{
+    top:0;
+    left:0;
+    padding:10px 0;
+    color: white;
+    pointer-events: none;
+    position: absolute;
+    font-size: 16px;
+    transition: .5s; /** refers to the time taken for to make the transition effects if any **/
+}
+
+/** to make animation effect on the label  when there is focus on input box **/
+/** first line : when click on input box**/
+/** second line: to keep the effects if text is entered in the box. It refers to the requires attribute in html code.
+ Also, if we click validate with empty text boxes, there is pop up message**/
+.loginBox .inputBox input:focus ~ label,
+.loginBox .inputBox input:valid ~ label
+{
+    top: -18px;
+    left: 0;
+    color: #03a9f4;
+    font-size: 12px;
+}
+
+.loginBox input[type="submit"]{ /** submit button style **/
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 10px 20px;
+    background: #03a9f4;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    float: right;
+}
